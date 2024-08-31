@@ -43,19 +43,24 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0 "
+              className={`dark:text-white ${
+                idx < 4
+                  ? "text-white"
+                  : " text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-600"
+              }  opacity-0 `}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
             >
-              {idx == 5 ? (
+              {/* {idx == 5 ? (
                 <Cover className=" text-white text-center ">
                   {warpSpeed} {"  "}
+                  bg-gradient-to-b from-indigo-500 to-purple-500
                 </Cover>
               ) : (
                 word
-              )}{" "}
-              {/* {word}{" "} */}
+              )}{" "} */}
+              {word}{" "}
             </motion.span>
           );
         })}

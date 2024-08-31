@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { Cover } from "./ui/cover";
 import { TextGenerateEffect } from "./ui/TextGenerate";
 import { WavyBackground } from "./ui/WavyBackground";
+import MagicButton from "./ui/MagicButton";
 import GridBackground from "./ui/GridBackground";
 function Hero() {
   return (
@@ -20,9 +21,13 @@ function Hero() {
             Crafting Dynamic Web Solutions with Nextjs
           </h2>
           <TextGenerateEffect
-            className="text-6xl text-white tracking-widest"
-            words="I Build amazing websites at "
+            className="lg:text-5xl md:text-4xl p-1 text-2xl max-w-4xl text-white tracking-widest "
+            words="Transforming Concepts into Seamless User Experiences"
           />
+          <p className="text-center text-gray-300  text-lg tracking-widest">
+            Hi, I'm Hamza a Next.js Deceloper
+          </p>
+          <MagicButton />
         </div>
       </WavyBackground>
       <GridBackground />
